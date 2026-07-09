@@ -35,9 +35,7 @@ ResultadoTraduccion SimuladorPaginacion::traducir(int direccionVirtual) {
     if (!tabla.estaMapeada(pagina)) {
         // Fallo de pagina: se necesita un marco fisico nuevo.
         if (marcosLibres.empty()) {
-            r.mensaje = "Fallo de pagina: no hay marcos libres en memoria fisica "
-                        "(memoria fisica agotada, se requeriria un algoritmo de "
-                        "reemplazo de paginas que esta fuera del alcance de esta entrega)";
+            r.mensaje = "Fallo de pagina: no hay marcos libres en memoria fisica ";
             return r;
         }
         int marco = marcosLibres.front();
@@ -52,8 +50,8 @@ ResultadoTraduccion SimuladorPaginacion::traducir(int direccionVirtual) {
     r.direccionFisica = marco * tamPagina + offset;
     r.exito = true;
     r.mensaje = r.huboFalloDePagina
-                    ? "Traduccion exitosa (con fallo de pagina resuelto)"
-                    : "Traduccion exitosa (pagina ya residente)";
+                    ? "Traduccion exitosa "
+                    : "Traduccion exitosa ";
     return r;
 }
 
