@@ -188,7 +188,6 @@ void AdministradorMemoria::imprimirEstado(std::ostream& out) const {
     out << "Memoria libre: " << memoriaLibreTotal()
         << " | Memoria ocupada: " << memoriaOcupadaTotal() << "\n";
     out << "Fragmentacion externa: " << fragmentacionExterna() << "\n";
-    out << "Fragmentacion interna: 0 (particion dinamica exacta; no aplica "
-           "en este esquema, ver informe)\n";
+    out << "Fragmentacion interna: 0 ";
 }
 

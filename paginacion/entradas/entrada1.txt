@@ -1,0 +1,12 @@
+# Ejemplo 1: memoria virtual de 64, memoria fisica de 32, paginas de 4
+INICIAR 64 32 4
+CONFIG
+TRADUCIR 0
+TRADUCIR 5
+TRADUCIR 9
+TRADUCIR 5
+TABLA
+LIBERAR 1
+TABLA
+TRADUCIR 4
+TABLA

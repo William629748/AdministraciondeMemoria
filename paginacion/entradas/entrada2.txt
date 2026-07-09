@@ -1,0 +1,12 @@
+# Ejemplo 2: memoria fisica pequena (solo 2 marcos) para forzar
+# agotamiento de memoria fisica, y direcciones invalidas
+INICIAR 32 8 4
+CONFIG
+TRADUCIR 0
+TRADUCIR 4
+TRADUCIR 8
+TABLA
+TRADUCIR 40
+LIBERAR 0
+TRADUCIR 8
+TABLA

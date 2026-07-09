@@ -1,0 +1,11 @@
+# Ejemplo 2: mismo escenario con Best Fit y Worst Fit para comparar
+INICIAR 500 BF
+ALLOC A 100
+ALLOC B 200
+ALLOC C 50
+FREE B
+ALLOC D 120
+ESTADO
+ESTRATEGIA WF
+ALLOC E 90
+ESTADO

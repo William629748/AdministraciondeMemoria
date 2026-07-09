@@ -1,0 +1,13 @@
+# Ejemplo 1: comparacion de First Fit con fragmentacion externa
+INICIAR 1024 FF
+ALLOC P1 200
+ALLOC P2 100
+ALLOC P3 300
+ALLOC P4 150
+FREE P2
+ALLOC P5 80
+ESTADO
+FREE P1
+FREE P3
+ALLOC P6 400
+ESTADO

@@ -1,0 +1,51 @@
+>> # Ejemplo 1: comparacion de First Fit con fragmentacion externa
+>> INICIAR 1024 FF
+[INICIAR] Memoria de tamano 1024 con estrategia First Fit
+>> ALLOC P1 200
+[ALLOC] Proceso P1 (200) -> OK
+>> ALLOC P2 100
+[ALLOC] Proceso P2 (100) -> OK
+>> ALLOC P3 300
+[ALLOC] Proceso P3 (300) -> OK
+>> ALLOC P4 150
+[ALLOC] Proceso P4 (150) -> OK
+>> FREE P2
+[FREE] Proceso P2 -> liberado
+>> ALLOC P5 80
+[ALLOC] Proceso P5 (80) -> OK
+>> ESTADO
+
+=== Estado de la memoria (First Fit) | Total: 1024 ===
+Inicio    Tamano    Estado    PID       
+--------------------------------------
+0         200       OCUPADO   P1        
+200       80        OCUPADO   P5        
+280       20        LIBRE     -         
+300       300       OCUPADO   P3        
+600       150       OCUPADO   P4        
+750       274       LIBRE     -         
+--------------------------------------
+Bloques libres: 2 | Bloques ocupados: 4
+Memoria libre: 294 | Memoria ocupada: 730
+Fragmentacion externa: 294
+Fragmentacion interna: 0 >> FREE P1
+[FREE] Proceso P1 -> liberado
+>> FREE P3
+[FREE] Proceso P3 -> liberado
+>> ALLOC P6 400
+[ALLOC] Proceso P6 (400) -> FALLO: no hay bloque libre suficiente (sin memoria)
+>> ESTADO
+
+=== Estado de la memoria (First Fit) | Total: 1024 ===
+Inicio    Tamano    Estado    PID       
+--------------------------------------
+0         200       LIBRE     -         
+200       80        OCUPADO   P5        
+280       320       LIBRE     -         
+600       150       OCUPADO   P4        
+750       274       LIBRE     -         
+--------------------------------------
+Bloques libres: 3 | Bloques ocupados: 2
+Memoria libre: 794 | Memoria ocupada: 230
+Fragmentacion externa: 794
+Fragmentacion interna: 0 

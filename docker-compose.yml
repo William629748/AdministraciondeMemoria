@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  memoria:
+    build: ./memoria
+    image: so-p2-memoria:latest
+    container_name: so-p2-memoria
+    stdin_open: true   # equivalente a -i
+    tty: true           # equivalente a -t
+    volumes:
+      - ./memoria/salidas:/app/salidas
+
+  paginacion:
+    build: ./paginacion
+    image: so-p2-paginacion:latest
+    container_name: so-p2-paginacion
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./paginacion/salidas:/app/salidas
