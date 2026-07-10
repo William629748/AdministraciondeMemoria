@@ -154,11 +154,5 @@ marcos libres con una cola (FIFO de asignación, no de reemplazo), resuelve
 fallos de página asignando el siguiente marco disponible y traduce a
 dirección física.
 
-## 6\. Nota sobre el uso de IA
-
-Este proyecto fue desarrollado con apoyo de Claude (Anthropic) como
-asistente de programación. Ver la sección correspondiente en el informe
-para el detalle del prompt utilizado y la personalización realizada.
-
 
 
